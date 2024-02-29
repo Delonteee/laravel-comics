@@ -54,5 +54,28 @@
 @endphp
 
 <header>
-    HEADER
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center ">
+
+            <div class="">
+                <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="">
+            </div>
+
+            <nav>
+                <ul class="p-0 m-0">
+                    @foreach ($links as $link)
+                        <li class="m-2 mb-0">
+                                <a href="{{ $link['url'] }}">
+                                    {{ strtoupper($link['label']) }}
+                                </a>
+                        </li>
+                    @endforeach
+                </ul>
+            </nav>
+
+            <form action="get">
+                <input type="text" placeholder="Search">
+            </form>
+        </div>
+    </div>
 </header>

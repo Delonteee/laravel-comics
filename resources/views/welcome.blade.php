@@ -4,22 +4,29 @@
 
 @section('main-content')
 
-    <div class="jumbotron"></div>
+    <div class="my-jumbotron"></div>
 
     <div class="container">
         <h1>
-            Current Series
+            CURRENT SERIES
         </h1>
 
-        <div class="comix-container">
-            <div class="row g-0  flex-wrap justify-content-center ">
+        <div class="d-flex justify-content-center">
+            <div class="row g-0 flex-wrap justify-content-center ">
                 @foreach($comics as $comic)
-                    @include('partials.comic')
+                    <div class="comic-card col-2">
+                        <div class="my-comic">
+                            <img src="{{ $comic['thumb'] }}" alt="">
+                        </div>
+                        <div class="info">
+                            {{ strtoupper($comic['series']) }}
+                        </div>
+                    </div>
                 @endforeach
             </div>
 
-            <button>Load more</button>
+            <button>LOAD MORE</button>
         </div>
     </div>
-    
+
 @endsection
