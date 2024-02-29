@@ -1,39 +1,58 @@
 @php
     $links = [
         [
+            'url' => 'characters',
+            'label' => 'Characters',
+            'active' => false,
+        ],
+        [
             'url' => '/',
-            'label' => 'Home',
+            'label' => 'Comics',
             'active' => true,
         ],
         [
-            'url' => '/chi-siamo',
-            'label' => 'Chi siamo',
-            'active' => true,
+            'url' => 'movies',
+            'label' => 'Movies',
+            'active' => false,
         ],
         [
-            'url' => '/contatti',
-            'label' => 'Contatti',
+            'url' => 'tv',
+            'label' => 'Tv',
+            'active' => false,
+        ],
+        [
+            'url' => 'games',
+            'label' => 'Games',
+            'active' => false,
+        ],
+        [
+            'url' => 'collectibles',
+            'label' => 'Collectibles',
+            'active' => false,
+        ],
+        [
+            'url' => 'videos',
+            'label' => 'Videos',
+            'active' => false,
+        ],
+        [
+            'url' => 'fans',
+            'label' => 'Fans',
+            'active' => false,
+        ],
+        [
+            'url' => 'news',
+            'label' => 'News',
+            'active' => false,
+        ],
+        [
+            'url' => 'shop',
+            'label' => 'Shop',
             'active' => false,
         ],
     ];
 @endphp
 
 <header>
-    <nav>
-        <ul>
-            @foreach ($links as $link)
-                <li>
-                    @if ($link['active'])
-                        <a href="{{ $link['url'] }}">
-                            {{ $link['label'] }}
-                        </a>
-                    @else
-                        <del>
-                            {{ $link['label'] }}
-                        </del>
-                    @endif
-                </li>
-            @endforeach
-        </ul>
-    </nav>
+    HEADER
 </header>
